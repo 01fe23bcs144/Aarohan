@@ -92,6 +92,26 @@
             font-style: italic;
             color: #1a74ce;
         }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            background-color: #f4f4f4;
+            border: 1px solid #0a0909;
+            padding: 10px;
+            text-align: left;
+            color:black;
+        }
+        th {
+            background-color: #f4f4f4;
+            color:black;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+            color:black;
+        }
     </style>
     <script>
 
@@ -620,6 +640,457 @@ return 0;
             `;
             content.style.display = 'block';
         }
+    function showImplementation(){
+            const content = document.getElementById('content');
+             content.innerHTML = `
+            <h1>Implementation Analysis Table</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Algorithm/Data Structure</th>
+                <th>Used? (Yes/No)</th>
+                <th>How and Where?</th>
+                <th>Space Efficiency</th>
+                <th>Time Efficiency</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Arrays</td>
+                <td>Yes</td>
+                <td>Storing static data such as transportation routes, windmill energy outputs.</td>
+                <td>O(n)</td>
+                <td>O(1)</td>
+            </tr>
+            <tr>
+                <td>Structures</td>
+                <td>Yes</td>
+                <td>Organizing complex data for industrial outputs and tourism categories.</td>
+                <td>O(n)</td>
+                <td>O(1)</td>
+            </tr>
+            <tr>
+                <td>List</td>
+                <td>Yes</td>
+                <td>Managing dynamic lists of transport schedules or tourist locations.</td>
+                <td>O(n)</td>
+                <td>O(n)</td>
+            </tr>
+            <tr>
+                <td>Stack</td>
+                <td>No</td>
+                <td>Not directly applicable to these cases.</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>Queue</td>
+                <td>Yes</td>
+                <td>Scheduling transport or industrial tasks and managing tourist queues.</td>
+                <td>O(n)</td>
+                <td>O(1) for enqueue/dequeue</td>
+            </tr>
+            <tr>
+                <td>Binary Tree</td>
+                <td>No</td>
+                <td>Not directly used for these business cases.</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>Binary Search Tree</td>
+                <td>Yes</td>
+                <td>Searching sorted data, like tourist spots by popularity or industries by category.</td>
+                <td>O(n)</td>
+                <td>O(log n)</td>
+            </tr>
+            <tr>
+                <td>AVL Tree</td>
+                <td>No</td>
+                <td>Not prioritized for balanced operations in these cases.</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>2-3 Tree</td>
+                <td>No</td>
+                <td>Not used for this scope.</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>Red-Black Tree</td>
+                <td>No</td>
+                <td>Not directly applicable.</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>Trie</td>
+                <td>Yes</td>
+                <td>Searching keywords in tourism or transport databases.</td>
+                <td>O(n*m)</td>
+                <td>O(k)</td>
+            </tr>
+            <tr>
+                <td>Heap</td>
+                <td>Yes</td>
+                <td>Managing priority queues in traffic optimization or industry scheduling.</td>
+                <td>O(n)</td>
+                <td>O(log n)</td>
+            </tr>
+            <tr>
+                <td>Lookup Table</td>
+                <td>Yes</td>
+                <td>Storing predefined configurations for windmill performance or transport hubs.</td>
+                <td>O(n)</td>
+                <td>O(1)</td>
+            </tr>
+            <tr>
+                <td>Sparse Table</td>
+                <td>No</td>
+                <td>Not directly applicable here.</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>Fenwick Tree</td>
+                <td>No</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>Segment Tree</td>
+                <td>Yes</td>
+                <td>Range queries for monitoring windmill energy outputs or weather patterns.</td>
+                <td>O(n)</td>
+                <td>O(log n)</td>
+            </tr>
+            <tr>
+                <td>Skip List</td>
+                <td>No</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>Union-Find</td>
+                <td>Yes</td>
+                <td>Analyzing connectivity in transportation networks.</td>
+                <td>O(n)</td>
+                <td>O(log n)</td>
+            </tr>
+            <tr>
+                <td>Hashing</td>
+                <td>Yes</td>
+                <td>Indexing large datasets for industrial or tourism-related information.</td>
+                <td>O(n)</td>
+                <td>O(1)</td>
+            </tr>
+            <tr>
+                <td>DFS</td>
+                <td>Yes</td>
+                <td>Exploring graph-based transportation networks and tourist maps.</td>
+                <td>O(n + m)</td>
+                <td>O(n + m)</td>
+            </tr>
+            <tr>
+                <td>BFS</td>
+                <td>Yes</td>
+                <td>Shortest paths for transportation or windmill maintenance logistics.</td>
+                <td>O(n + m)</td>
+                <td>O(n + m)</td>
+            </tr>
+            <tr>
+                <td>Quick Sort</td>
+                <td>Yes</td>
+                <td>Sorting real-time data, like industrial production rates or tourist traffic.</td>
+                <td>O(log n)</td>
+                <td>O(n log n)</td>
+            </tr>
+            <tr>
+                <td>Boyer-Moore</td>
+                <td>Yes</td>
+                <td>Searching patterns in tourism descriptions or industrial datasets.</td>
+                <td>O(n)</td>
+                <td>O(m + k)</td>
+            </tr>
+            <tr>
+                <td>Knuth-Morris-Pratt</td>
+                <td>Yes</td>
+                <td>Searching patterns in transport or windmill performance reviews.</td>
+                <td>O(n)</td>
+                <td>O(n + m)</td>
+            </tr>
+            <tr>
+                <td>Kruskal</td>
+                <td>Yes</td>
+                <td>Building minimum spanning trees for transport or windmill network optimization.</td>
+                <td>O(n log n)</td>
+                <td>O(e log e)</td>
+            </tr>
+            <tr>
+                <td>Prim</td>
+                <td>Yes</td>
+                <td>Optimizing transportation or energy grids like windmill connections.</td>
+                <td>O(n^2) or O(e + log n)</td>
+                <td>O(n log n)</td>
+            </tr>
+            <tr>
+                <td>Dijkstra</td>
+                <td>Dijkstra</td>
+                <td>Yes</td>
+                <td>Finding shortest paths in transportation or industrial logistics.</td>
+                <td>O(n^2) O(n log n)</td>
+            </tr>
+            <tr>
+                <td>Floyd</td>
+                <td>Yes</td>
+                <td>Multi-source shortest paths for transport networks or wind energy systems.</td>
+                <td>O(n^3)</td>
+                <td>O(n^3)</td>
+            </tr>
+            <tr>
+                <td>Warshall</td>
+                <td>Yes</td>
+                <td>Connectivity analysis for transportation and windmill networks.</td>
+                <td>O(n^3)</td>
+                <td>O(n^3)</td>
+            </tr>
+            <tr>
+                <td>Bellman-Ford</td>
+                <td>Yes</td>
+                <td>Handling edge weights in transport costs or wind energy transfer paths.</td>
+                <td>O(n^2)</td>
+                <td>O(n^2)</td>
+            </tr>
+        </tbody>
+    </table>
+    
+      `;
+      content.style.display = 'block';
+        }
+        function showphase(){
+            const content = document.getElementById('content');
+             content.innerHTML = `
+             <h1>Computational Thinking Table 1</h1>
+                <table>
+        <thead>
+            <tr>
+                <th><span class="highlight">Idea</span></th>
+                <th><span class="highlight">Description</span></th>
+                <th><span class="highlight">Can you use this in your project?</span></th>
+                <th><span class="highlight">How and Where?</span></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><span class="highlight">Decomposition</span></td>
+                <td>Divide the problem into smaller manageable parts.</td>
+                <td>Yes</td>
+                <td>
+                    Breaking transportation planning into route optimization, traffic control, and maintenance.<br>
+                    Splitting tourism into destination management, tourist flow analysis, and promotional strategies.<br>
+                    For industries, dividing into resource allocation, production scheduling, and supply chain.<br>
+                    For windmills, managing site selection, energy output analysis, and maintenance scheduling.
+                </td>
+            </tr>
+            <tr>
+                <td><span class="highlight">Pattern Recognition</span></td>
+                <td>Identifying common recurring patterns.</td>
+                <td>Yes</td>
+                <td>
+                    Observing traffic congestion patterns for transportation solutions.<br>
+                    Analyzing peak tourist seasons and trends in tourist preferences.<br>
+                    Recognizing repetitive industrial resource usage and production bottlenecks.<br>
+                    Identifying wind energy fluctuations based on seasonal and geographic patterns.
+                </td>
+            </tr>
+            <tr>
+                <td><span class="highlight">Abstraction</span></td>
+                <td>Keep only the required data for the task.</td>
+                <td>Yes</td>
+                <td>
+                    Focusing on key metrics like travel time and route efficiency for transportation.<br>
+                    Simplifying tourism data to just visitor demographics and most visited locations.<br>
+                    Highlighting core industrial outputs and key performance indicators (KPIs).<br>
+                    Retaining only relevant windmill performance metrics like energy output and downtime.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+        <h1>Computational Ideas Table 2</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>SL. No.</th>
+                <th>Idea</th>
+                <th>Description</th>
+                <th>Can you use this in your project?</th>
+                <th>How and where?</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Brute Force</td>
+                <td>The definitional way of solving the problem</td>
+                <td>Yes</td>
+                <td>For transportation, finding all possible routes and choosing the best.<br>For tourism, testing all combinations of tourist packages to find the most appealing.</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Divide and Conquer</td>
+                <td>Divide the problem into smaller parts (preferably half) and then solve the problem</td>
+                <td>Yes</td>
+                <td>For industries, splitting production tasks into smaller, parallel operations.<br>For windmills, dividing the wind farm area into regions to optimize individual turbine placement.</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Decrease and Conquer</td>
+                <td>Decrease the input size by 1 or some constant k in each solution phase</td>
+                <td>Yes</td>
+                <td>For transportation, iteratively reducing congestion data until a traffic-free route is found.<br>For industries, gradually reducing supply chain bottlenecks in production cycles.</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Transform and Conquer</td>
+                <td>Change the problem representation to something else</td>
+                <td>Yes</td>
+                <td>For tourism, converting customer reviews into a sentiment score for package optimization.<br>For transportation, transforming road network data into a graph for easier analysis of shortest paths.</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Dynamic Programming</td>
+                <td>Smaller solutions contribute to larger</td>
+                <td>Yes</td>
+                <td>For transportation, solving smaller sub-problems like city-to-city travel to build an entire route map.<br>For windmills, calculating cumulative energy production using smaller regional data.</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Greedy Technique</td>
+                <td>Select optimal choice in each iteration</td>
+                <td>Yes</td>
+                <td>For industries, choosing the supplier with the lowest cost at each step in procurement.<br>For tourism, selecting the most popular destinations to promote based on visitor feedback.</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Space and Time Tradeoff</td>
+                <td>If you optimize time, you lose space (example: Hashing)</td>
+                <td>Yes</td>
+                <td>For industries, storing precomputed data like inventory levels in lookup tables for faster access.<br>For transportation, storing pre-calculated routes in a hash table for quick retrieval.</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Backtracking</td>
+                <td>Prune the not required state space tree element</td>
+                <td>Yes</td>
+                <td>For transportation, finding the best route by discarding paths with traffic congestion.<br>For tourism, eliminating less appealing tourist packages based on constraints like budget or preferences.</td>
+            </tr>
+        </tbody>
+    </table>
+        <h1>Computational Ideas Table 3</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>SL. No.</th>
+                <th>Idea</th>
+                <th>Description</th>
+                <th>Can you use this in your project?</th>
+                <th>How and where?</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Brave and Cautious Travel</td>
+                <td>Travel till the dead end or breadth-wise</td>
+                <td>Yes</td>
+                <td>For transportation, BFS for finding optimal routes or exploring all possible connections in a road network.</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Pruning</td>
+                <td>Remove the not required part</td>
+                <td>Yes</td>
+                <td>For tourism, removing unnecessary destinations from a tour plan based on visitor preferences.</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Lazy Propagation</td>
+                <td>Do not update unless need be</td>
+                <td>Yes</td>
+                <td>For windmills, delaying updates to the power grid connection until critical thresholds are met.</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Sliding Window</td>
+                <td>A smaller view of dataset</td>
+                <td>Yes</td>
+                <td>For industries, monitoring production output over a fixed time window to detect inefficiencies.</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Level Order Traversal</td>
+                <td>From each level, left to right</td>
+                <td>Yes</td>
+                <td>For hierarchical transport systems, analyzing routes level by level for optimal connectivity.</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Hierarchical Data and Trees</td>
+                <td>Organization of data</td>
+                <td>Yes</td>
+                <td>For industries, organizing supply chain data into a tree structure to easily navigate dependencies.</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Edge Relaxation</td>
+                <td>Select the minimum edge and make it part of solution set</td>
+                <td>Yes</td>
+                <td>For transportation, applying edge relaxation in algorithms like Dijkstra’s for shortest path calculation.</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Balancing a Tree</td>
+                <td>Is the tree (data) skewed? Do we need to balance?</td>
+                <td>Yes</td>
+                <td>For tourism, balancing a decision tree of customer preferences for better recommendation accuracy.</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>Kleene Closure</td>
+                <td>Transitive property</td>
+                <td>Yes</td>
+                <td>For transportation, determining indirect connections between cities in a road network.</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>Pre-Computing</td>
+                <td>Pre-compute and keep some results</td>
+                <td>Yes</td>
+                <td>For windmills, precomputing energy output predictions for quick resource allocation.</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>Parental Dominance</td>
+                <td>Maintain a priority data</td>
+                <td>Yes</td>
+                <td>For industries, ensuring that critical production tasks (parents) take precedence over dependent tasks.</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>Prefix and Suffix</td>
+                <td>Generate prefix and suffix</td>
+                <td>Yes</td>
+                <td>For tourism, analyzing tourist reviews by segmenting keywords into prefixes and suffixes for sentiment analysis.</td>
+            </tr>
+        </tbody>
+    </table>
+       `;
+      content.style.display = 'block';
+        }
     </script>
 </head>
 <body>
@@ -638,6 +1109,8 @@ return 0;
         <button onclick="showBusinessCases()">Business Cases</button>
         <button onclick="showSDGMapping()">SDG Mapping</button>
         <button onclick="showCodeImplementation()">Code Implementation</button>
+        <button onclick="showImplementation()">Implementation analysis</button>
+        <button onclick="showphase()">Computational table</button>
     </div>
 
     <div id="content"></div>
