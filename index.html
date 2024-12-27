@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smart City AAROHAN</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         body {
-            background-color: #292929;
+            background-color: #050012;
             color: aliceblue;
             font-family: 'Times New Roman', Times, serif;
             text-align: center;
@@ -36,7 +37,7 @@
             cursor: pointer;
             border: black;
             border-radius: 5px;
-            background-color: #061ab7;
+            background: linear-gradient(90deg, #020146, #000088);
             color: white;
             transition: background-color 0.3s;
         }
@@ -55,33 +56,50 @@
             border: 1px solid #040000;
             padding: 20px;
             border-radius: 10px;
-            background-color: #3d3d3d;
+            background-color: #080025;
         }
         pre {
-            background-color: #f5f5f5;
+            background-color: #ffffff;
             color: #000;
             padding: 10px;
-            border-radius: 5px;
+            border-color: #0c0024;
+            border-radius: 10px;
             overflow: auto;
+        }
+
+        .home-box {
+    background: linear-gradient(145deg, #060011, #120136);
+    color: #f5f5f5;
+    padding: 25px;
+    border-radius: 20px;
+    border: 2px solid #3498db;
+    display: inline-block;
+    box-shadow: 0 6px 15px rgba(0, 0, 116, 0.5);
+    width: 1100px; /* Fixed width */
+    height: 125px; /* Fixed height */
+    overflow: hidden; /* Prevent overflow of content */
+}
+.home h2 {
+            font-size: 50px;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, #090161, #12d5f3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .subheading {
+            margin-top: -10px;
+            font-size: 24px;
+            font-style: italic;
+            color: #1a74ce;
         }
     </style>
     <script>
-        function showIntroduction() {
-            const content = document.getElementById('content');
-            content.innerHTML = `
-                <h3>Introduction</h3>
-                <p><strong>Name:</strong> Bhagyashree.D.Y</p>
-                <p><strong>Roll no:</strong> 327</p>
-                <p><strong>USN:</strong> 01FE23BCS144</p>
-                <p><strong>Division:</strong> C</p>
-            `;
-            content.style.display = 'block';
-        }
 
         function showSDGMapping() {
             const content = document.getElementById('content');
             content.innerHTML = `
                 <h3>SDG Mapping</h3>
+
                 <h4>1. Transportation</h4>
                 <ul>
                     <p><strong>SDG 9:</strong> Industry, Innovation, and Infrastructure</p>
@@ -605,12 +623,17 @@ return 0;
     </script>
 </head>
 <body>
-    <h1>Aarohan: A Smart City Development Project</h1>
-    <h2>Project Presentation</h2>
-    <p class="subtitle">Innovative Approaches to Sustainability and Urban Development</p>
+    <div class="home">
+        <div class="home-box">
+            <h2>Project Presentation</h2>
+            <p class="subheading">Innovative Approaches to Sustainability and Urban Development</p>
+            
+        </div>
+    </div>
+
+   
 
     <div class="button-container">
-        <button onclick="showIntroduction()">Introduction</button>
         <button onclick="showCourseReflection()">Course reflection</button>
         <button onclick="showBusinessCases()">Business Cases</button>
         <button onclick="showSDGMapping()">SDG Mapping</button>
